@@ -3,3 +3,17 @@ server:
 spring:
   application:
     name: kafka-study
+  kafka:
+    bootstrap-servers: localhost:9092 # kafka代理地址
+    producer:
+      # 每次批量发送消息的数量
+      batch-size: 16384
+      # 缓存容量
+      buffer-memory: 33554432
+      # key的序列化器
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      # value的序列化器
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+
+
