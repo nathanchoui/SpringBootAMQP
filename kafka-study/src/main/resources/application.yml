@@ -14,6 +14,5 @@ spring:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       # value的序列化器
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
-
-
-
+#    consumer:
+#      group-id: groupA

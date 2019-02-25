@@ -11,7 +11,7 @@ public class Message {
 
     private String msg; //消息
 
-    private long timestamp;  //时间戳
+    private long timestamp = System.currentTimeMillis();  //时间戳
 
     public Long getId() {
         return id;

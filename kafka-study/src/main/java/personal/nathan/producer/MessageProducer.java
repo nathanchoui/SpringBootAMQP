@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
 import personal.nathan.domain.Message;
 
 /**
@@ -20,7 +21,7 @@ public class MessageProducer {
     @Autowired
     private Gson gson;
 
-    public void produce(Message message) {
+    public void produce(@RequestBody  Message message) {
         kafkaTemplate.send("test", gson.toJson(message));
     }
 }
